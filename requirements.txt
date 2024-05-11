@@ -1,10 +1,10 @@
-numpy==1.19.5
+numpy==1.21.6
 sounddevice==0.4.4
 matplotlib==3.4.3
 wordcloud==1.8.1
 soundfile==0.10.3.post1
 h5py==3.1.0
-tensorflow==2.9.1  # Compatible with Python 3.8
+tensorflow==2.9.1  # This version is compatible with numpy 1.21.6
 scikit-learn==0.24.2
 librosa==0.8.1
 streamlit==1.8.0
