@@ -1,0 +1,15 @@
+
+librosa==0.8.0
+matplotlib==3.3.4
+numpy==1.19.5
+pandas==1.1.5
+pickle-mixin==1.0.2
+PTL==10.3.0
+scikit-learn==0.23.2
+seaborn==0.11.1
+soundfile==0.10.3.post1
+sounddevice==0.4.6
+tensorflow==2.3.0
+whisper==0.1.4 
+wordcloud==1.8.1
+
