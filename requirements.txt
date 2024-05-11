@@ -8,4 +8,4 @@ tensorflow==2.9.1  # Compatible with Python 3.8
 scikit-learn==0.24.2
 librosa==0.8.1
 streamlit==1.8.0
-whisper==0.1.7  # Adjusted for compatibility, check for the latest version if available
+--upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
