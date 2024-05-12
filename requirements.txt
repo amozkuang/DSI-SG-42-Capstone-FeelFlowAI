@@ -1,11 +1,11 @@
-numpy==1.21.6
-sounddevice==0.4.4
+numpy==1.19.5
 matplotlib==3.4.3
 wordcloud==1.8.1
-soundfile==0.10.3.post1
+PySoundFile==0.10.3.post1
 h5py==3.1.0
-tensorflow==2.9.1  # This version is compatible with numpy 1.21.6
+tensorflow==2.6.0  # This version is well-supported in Python 3.9
 scikit-learn==0.24.2
 librosa==0.8.1
-streamlit==1.8.0
+streamlit==1.0.0  # Compatible with Python 3.9
+sounddevice==0.4.4
 git+https://github.com/openai/whisper.git
