@@ -104,15 +104,16 @@ def visualize_audio(audio_data, predicted_emotion, probability):
 # Main app
 def main():
     logo_path = '/Users/amoz/GA/DSI-SG-42-Capstone-FeelFlowAI/img/ff.png'
-    col1, col2 = st.columns([1, 3])
+    col1, col2 = st.columns([1, 5])
     with col1:
-        st.image(logo_path, width=120)
+        st.image(logo_path, width=90)
     with col2:
         st.markdown("""
         <h1 style='margin-left: 0;'>FeelFlow AI</h1>
-        <p style='margin-left: 0; font-size: 18px;'>Decoding Emotions, Advancing Patient Support</p>
-        <h3 style='margin-left: 0; font-size: 16px; width: 100%;'>An AI-powered tool to analyse emotions from voice recordings.</h3>
+        <h2 style='margin-left: 1; font-size: 25px;'>Decoding Emotions, Advancing Patient Support</h3>
+        <p style='margin-left: 0; font-size: 20px; width: 100%;'>An AI-powered tool to analyse emotions from voice recordings.</p>
         """, unsafe_allow_html=True)
+    
 
     model_path = '/Users/amoz/GA/DSI-SG-42-Capstone-FeelFlowAI/models/wavenet_model.h5'
     model, encoder, scaler = load_components(model_path)
