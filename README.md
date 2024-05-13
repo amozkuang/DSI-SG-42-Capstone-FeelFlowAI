@@ -7,7 +7,7 @@
 
 ## Executive Summary
 
-To enhance diagnosis and treatment outcomes in mental health, our project leverages Speech Emotion Recognition technology to predict patients' emotional states accurately. This initiative, supported by the Innovation Team at AI Singapore, targets clinicians, therapists, and mental health professionals attending the "Mental Health with AI" seminar organized by the Ministry of Health.
+To enhance diagnosis and treatment outcomes in mental health, our project leverages Speech Emotion Recognition technology to predict patients' emotional states accurately. This initiative targets clinicians, therapists, and mental health professionals attending the "Mental Health with AI" seminar organized by the Ministry of Health.
 
 Our process began with scraping unseen YouTube audio data, where GenZ and millennials openly discuss their mental health struggles. We then pooled training and testing data from data that are commonly used in the Speech Emotion Recognition space (CREMA-D, TESS, ESD). The data underwent preprocessing, including audio augmentation and feature extraction, and was then combined with training and test data for comprehensive analysis. We employed multiple models—Random Forest, MLP, LSTM + 1D CNN, LSTM + 2D CNN, and WaveNet—to model seen data, selecting WaveNet for its superior performance (Training Accuracy: 0.65, Validation Accuracy: 0.61) on unseen data, validated using ESD data.
 
