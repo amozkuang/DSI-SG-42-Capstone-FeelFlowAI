@@ -1,0 +1,14 @@
+ffmpeg-python
+librosa==0.8.1
+moviepy==1.0.3
+noisereduce==2.0.1
+numpy==1.22.3
+os-sys==2.1.4
+pandas==1.4.2
+pydub==0.25.1
+soundfile==0.10.3.post1
+spleeter
+--no-cache-dir yt-dlp
+setuptools
+wheel
+numba
