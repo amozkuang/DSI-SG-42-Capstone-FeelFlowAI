@@ -30,7 +30,7 @@ The objectives of this study is build an based on pre-trained models to accurate
 2. Within each emotion , how many times how many times do accurate predictions occur
 
 ## Definitions
-### Categories
+### Emotional Labels
 Since we're looking to predict, we narrowed in on 6 emotions (taking after CREMA-D):
 * Angry
 * Disgust
@@ -56,6 +56,18 @@ Due to the capacity of storage required (>10GB), we will not be uploading onto t
 
     - [Emotion Speech Dataset (ESD)](https://github.com/HLTSingapore/Emotional-Speech-Data): From the parent dataset above, we split the evaluation data out to use as a medium of validating the model's predictability.
 
+The below is the Data Dictionary of the columns present in the [combined augmented features dataset](csv/combined_aug_features.csv.zip), used in the following notebook(s):
+* [03_Exploratory Data Analysis](code/03_Exploratory%20Data%20Analysis.ipynb)
+* [04_Modeling (Seen)](code/04_Modeling%20(Seen).ipynb)
+
+| Columns | Number of values | Description |
+|------------------------|-----------------------------|-----------------------------|
+| Zero-Crossing Rate (ZCR) | 1 | Total of 4 columns with all the augmentation variation (original, noisy, stretch, pitch)|
+| Chroma Short-Time Fourier Transform | 12 | Total of 48 columns with the augmentation variation |
+| Mel-Frequency Cepstral Coefficients (MFCC) | 20 | Total of 80 columns with the augmentation variation |
+| Root Mean Square (RMS) | 1 | Total of 4 columns with the augmentation variation |
+| Spectral Contrast | 7 | Total of 28 columns with the augmentation variation |     
+| Label | NA | Total of 1 column with 6 emotional labels - Angry, Disgust, Fear, Happy, Neutral, Sad |
 
 ## Requirements for Code Execution
 For the purpose of this project, we'll be alternating between 2 Python version(s). Reason for this is due to dependency issues with the different packages required
