@@ -16,7 +16,7 @@ import librosa.display
 import matplotlib.colors as mcolors
 
 # Set the page config to load the favicon and set the page title
-st.set_page_config(page_title="FeelFlow AI", page_icon="/Users/amoz/GA/DSI-SG-42-Capstone-FeelFlowAI/img/ff.png")
+st.set_page_config(page_title="FeelFlow AI", page_icon="img/ff.png")
 
 st.markdown("""
 <style>
@@ -32,7 +32,7 @@ st.markdown("""
 def load_components(model_path):
     try:
         model = load_model(model_path)
-        encoder = pickle.load(open('/Users/amoz/GA/DSI-SG-42-Capstone-FeelFlowAI/encoders/label_encoder.pkl', 'rb'))
+        encoder = pickle.load(open('encoders/label_encoder.pkl', 'rb'))
         scaler = StandardScaler()
         scaler.fit(np.random.rand(10, 164))  # Dummy initialization
         return model, encoder, scaler
@@ -103,7 +103,7 @@ def visualize_audio(audio_data, predicted_emotion, probability):
 
 # Main app
 def main():
-    logo_path = '/Users/amoz/GA/DSI-SG-42-Capstone-FeelFlowAI/img/ff.png'
+    logo_path = 'img/ff.png'
     col1, col2 = st.columns([1, 5])
     with col1:
         st.image(logo_path, width=90)
@@ -115,7 +115,7 @@ def main():
         """, unsafe_allow_html=True)
     
 
-    model_path = '/Users/amoz/GA/DSI-SG-42-Capstone-FeelFlowAI/models/wavenet_model.h5'
+    model_path = 'models/wavenet_model.h5'
     model, encoder, scaler = load_components(model_path)
 
     if st.button("Record and Analyse"):
@@ -129,12 +129,12 @@ def main():
         visualize_audio(audio_data, predicted_emotion, probability)
 
         if st.button("Download Audio"):
-            audio_file_path = "/Users/amoz/GA/DSI-SG-42-Capstone-FeelFlowAI/audio/audio.wav"
+            audio_file_path = "audio/audio.wav"
             save_audio(audio_data, audio_file_path)
             st.success("Audio saved successfully!")
 
         if st.button("Download Transcription"):
-            transcription_file_path = "/Users/amoz/GA/DSI-SG-42-Capstone-FeelFlowAI/transcriptions/transcription.txt"
+            transcription_file_path = "transcriptions/transcription.txt"
             save_transcription(transcription, transcription_file_path)
             st.success("Transcription saved successfully!")
 
