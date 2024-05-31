@@ -88,7 +88,8 @@ def visualize_audio(audio_data, predicted_emotion, probability):
     # Spectrogram
     X = librosa.stft(audio_data)
     Xdb = librosa.amplitude_to_db(abs(X))
-    img = librosa.display.specshow(Xdb, sr=16000, x_axis='time', y_axis='hz', ax=axs[1])
+    img = librosa.display.specshow(Xdb, sr=16000, x_axis='time',
+    y_axis='hz', ax=axs[1])
     axs[1].set_title("Spectrogram")
     fig.colorbar(img, ax=axs[1], format='%+2.0f dB')
 
